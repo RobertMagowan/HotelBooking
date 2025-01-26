@@ -100,7 +100,7 @@ public class RoomService : IRoomService
         }
     }
 
-    public IQueryable<Room> GetAvailableRoomsQuery(DateOnly startDate, DateOnly endDate)
+    private IQueryable<Room> GetAvailableRoomsQuery(DateOnly startDate, DateOnly endDate)
     {
         return _context.Rooms
             .Where(room =>
